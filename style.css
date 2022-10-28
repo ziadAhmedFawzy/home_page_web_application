@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "cairo";
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.container .first-header {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #003A69;
+    color: #fff;
+    position: sticky;
+}
+
+.search {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -20px;
+    padding: 10px;
+}
+
+.search input {
+    all: unset;
+    width: 95%;
+    padding: 5px;
+    margin-top: 1%;
+    color: #fff;
+}
+
+.search button {
+    all: unset;
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+}
+
+.container .first-header h1 img {
+    width: 50px;
+}
+
+.container .first-header button {
+    all: unset;
+}
+
+.container .first-header button img {
+    width: 20px;
+    margin: 0 10px;
+}
+
+.container .first-header .nav-icon {
+    margin: auto 0;
+}
+
+.container nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    list-style: none;
+    text-transform: uppercase;
+    background-color: #055292;
+}
+
+.container nav li {
+    margin: 10px 20px;
+}
+
+.container nav li a {
+    text-decoration: none;
+    color: #fff;
+    ;
+}
+
+.container-boxs-app {
+    width: 90%;
+    margin: auto;
+    direction: rtl;
+}
+
+.container-boxs-app .box-app .apps {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #003A69;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-boxs-app .box-app .apps .app {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.container-boxs-app .box-app .apps .app img {
+    width: 70px;
+    margin: 15px;
+}
+
+.container-boxs-app .box-app .apps .app h3 {
+    color: #fff ;
+}
+
+aside {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    text-align: right;
+    width: 300px;
+    height: 100vh;
+    background-color: #0971C5;
+    z-index: 999;
+    overflow: auto;
+}
+
+aside h1 {
+    text-align: center;
+}
+
+aside ul {
+    text-align: center;
+    list-style: none;
+}
+
+aside ul li {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+aside ul li a {
+    display: block;
+    width: 90%;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition-duration: 0.2s;
+}
+
+aside ul li a:hover {
+    background-color: #fff;
+    color: #003A69;
+    padding: 10px;
+}
+
+aside button {
+    all: unset;
+    margin: 25px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.show-side-bar {
+    display: block;
+    position: fixed;
+    animation-duration: 0.2s;
+    animation-name: show-side-bar;
+}
+
+@keyframes show-side-bar {
+    0% {
+        right: -300px;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+button {
+    cursor: pointer !important;
+}
+
+.hide-side-bar {
+    display: none;
+    position: absolute;
+    animation-duration: 0.2s;
+    animation-name: hide-side-bar;
+}
+
+@keyframes hide-side-bar {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: -300px;
+    }
+}
+
+.scroll-header {
+    position: fixed !important;
+    animation-name: scroll-smooth;
+    animation-duration: 0.5s;
+    opacity: 1;
+    z-index: 998;
+}
+
+@keyframes scroll-smooth {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hide-scroll-header {
+    position: fixed;
+    animation-name: hide-scroll-smooth;
+    animation-duration: 0.5s;
+    opacity: 1;
+}
+
+@keyframes hide-scroll-smooth {
+    100% {
+        opacity: 1;
+    }
+}
+
+.search-show {
+    width: 100%;
+    padding: 10px;
+    top: 0;
+    animation-name: show-search;
+    animation-duration: 0.1s;
+    z-index: 999;
+    background-color: #003A69;
+}
+
+@keyframes show-search {
+    0% {
+        top: -80px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+.search-hide {
+    width: 100%;
+    padding: 10px;
+    top: -150px;
+    animation-name: hide-search;
+    animation-duration: 0.5s;
+    z-index: 999;
+    background-color: #003A69;
+}
+
+@keyframes hide-search {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: -150px;
+    }
+}
