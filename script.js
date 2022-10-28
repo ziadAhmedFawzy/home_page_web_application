@@ -2,7 +2,7 @@
 
 function APP(nameApp) {
     localStorage.setItem('name' , nameApp);
-    location.href = '../app.html';
+    location.href = 'https://ziadahmedfawzy.github.io/app_page_web_application/';
 }
 
 let nav_open = document.getElementById("nav_open");
